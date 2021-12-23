@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Upload Portal</title>
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <form action="/api/upload" method="POST" enctype="multipart/form-data">
+            <table style="border-width: 15px; border-style: solid; margin: auto;">
+                <tr>
+                    <td><label>Title: </label></td>
+                    <td><input autofocus name="title" placeholder="Enter title of video" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Description: </label>
+                    </td>
+                    <td>
+                        <input autofocus name="description" placeholder="Enter short description" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Genre: </label>
+                    </td>
+                    <td>
+                        <input autofocus name="genre" list="x" placeholder="Enter genre of video" type="text" />
+                        <datalist id="x">
+                            <option>Horror</option>
+                            <option>Thriller</option>
+                            <option>Mystery</option>
+                            <option>Sci-Fi</option>
+                            <option>Comedy</option>
+                            <option>Mythological</option>
+                            <option>Adventure</option>
+                            <option>Epic / Historical</option>
+                            <option>Documentary</option>
+                            <option>Drama</option>
+                            <option>Animation</option>
+                            <option>Educational</option>
+                            <option>Sports</option>
+                            <option>Crime</option>
+                            <option>Action</option>
+                            <option>Fantasy</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>File upload: </label>
+                    </td>
+                    <td>
+                        <input autofocus name="videofile" type="file"/>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button class="btn btn-primary" type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
